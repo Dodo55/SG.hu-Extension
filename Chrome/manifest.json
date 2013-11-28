@@ -63,6 +63,7 @@
    "permissions": [
       "http://www.sg.hu/",
       "http://sg.hu/",
-      "http://sgsync.dev.kreatura.hu/"
+      "http://sgsync.dev.kreatura.hu/",
+	  "http://services.dvps.tk/"
    ]
 }
