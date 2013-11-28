@@ -3012,36 +3012,22 @@ var message_center = {
 				continue;
 			}
 
-			function doAjax(messages, key) {				
+			function doAjax(messages, key) {
+
 				// Var to count new messages
-				var counter = 0;				
+				var counter = 0;
+
+				$.ajax({
 				
-				$.ajax({ 				
-			
-					//Original
-					/*
 					url : 'utolso80.php?id=' + messages[key]['topic_id'],
-					mimeType : 'text/html;charset=iso-8859-2',	
+					mimeType : 'text/html;charset=iso-8859-2',
 					async: false,
-					*/
-					
-					//Workaround					
-					url : 'http://services.dvps.tk/sgtopicproxy/?id=' + messages[key]['topic_id'],						
 					
 					success : function(data) {
 
 						// Parse html response
 						var tmp = '';
-						
-						//Original
-						// tmp = $(data); 
-						
-						//Workaround:						
-						if (data){								
-							if (data.result=="OK"){								
-								tmp=$(data.data);
-							}						
-						}						
+							 tmp = $(data);
 							 
 						var answers = new Array();
 						var TmpAnswers = new Array();
